@@ -1,4 +1,5 @@
 # =========================================
+# Use if target column is category(yes,no/pass,fail)
 # PRACTICAL: CLASSIFICATION USING ML
 # Algorithm: Logistic Regression
 # =========================================
