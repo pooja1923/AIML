@@ -30,6 +30,9 @@ print(df.tail())
 print("\nColumn Names:")
 print(df.columns)
 
+#convert taget column if it is not numerical
+df["target_column"] = df["target_column"].map({"Yes":1, "No":0})  #change here(also change val yes,no)
+
 # Observations
 print("\nObservations:")
 print("1. Dataset contains multiple features.")
@@ -64,8 +67,9 @@ print("2. Histogram shows data distribution.")
 # Q3: FEATURE PREPARATION
 # =========================================
 
-# Input Features
+# Input Features (drop columns which are not numerical)
 X = df.drop('target_column', axis=1)          # CHANGE HERE
+#X = df.drop(["target_column", "column"], axis=1)     # CHANGE HERE
 
 # Output Variable
 y = df['target_column']                       # CHANGE HERE
